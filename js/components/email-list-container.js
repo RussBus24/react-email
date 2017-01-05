@@ -3,8 +3,8 @@ var EmailList = require('./email-list');
 
 var EMAILS = require('../emails');
 
-var EmailListContainer = function() {
-    return <EmailList emails={EMAILS} />;
+var EmailListContainer = function(props) {
+    return <EmailList emails={EMAILS[props.params.box]} />;
 };
 
 module.exports = EmailListContainer;
